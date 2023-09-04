@@ -26,11 +26,11 @@ This project utilizes a range of technologies and tools, including:
 
 ## API Routes
 
-- `https://rbvc-profile-v2-server.onrender.com//users`: GET / POST / PUT / DELETE
-- `https://rbvc-profile-v2-server.onrender.com//messages`: GET / POST / PUT / DELETE
-- `https://rbvc-profile-v2-server.onrender.com//auth`: POST (disabled)
-- `https://rbvc-profile-v2-server.onrender.com//auth/refresh`: GET (disabled)
-- `https://rbvc-profile-v2-server.onrender.com//auth/logout`: POST (disabled)
+- `https://rbvc-profile-v2-server.onrender.com/users`: GET / POST / PUT / DELETE
+- `https://rbvc-profile-v2-server.onrender.com/messages`: GET / POST / PUT / DELETE
+- `https://rbvc-profile-v2-server.onrender.com/auth`: POST (disabled)
+- `https://rbvc-profile-v2-server.onrender.com/auth/refresh`: GET (disabled)
+- `https://rbvc-profile-v2-server.onrender.com/auth/logout`: POST (disabled)
 
 ## The JSON format for users: 
 
