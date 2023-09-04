@@ -1,0 +1,33 @@
+# version: '3.1'
+
+# services:
+#   rbvcprofiledb:
+#     image: mongo
+#     restart: always
+#     ports:
+#       - "27017:27017"
+#     environment:
+#       - MONGO_INITDB_ROOT_USERNAME=rafaelbvc
+#       - MONGO_INITDB_ROOT_PASSWORD=r4f431
+#     volumes:
+#       - ./rbvcprofile-db-bkp:/var/lib/postgresql/data
+
+# volumes:
+#   rbvcprofile-mongo-db-bkp:
+
+
+# version: '3.1'
+
+# services:
+#   rbvcprofile-server:
+#     container_name: rbvcprofile-server
+#     restart: always
+#     build:
+#       context: "./"
+#       dockerfile: Dockerfile
+
+#     volumes:
+#       - .:./app
+    
+#     ports:
+#       - "5030:5030"
