@@ -4,49 +4,45 @@ Welcome to my portfolio showcase project! This project is a representation of my
 
 ## Introduction
 
-I've aimed to innovate the user interface by making the screens draggable, enhancing the user experience.
+This is the server side of my project
 
-The entire application is designed to be responsive, with breakpoints carefully considered to ensure optimal display across various devices. I've followed the mobile-first principle in designing the architecture.
+Note that the jwt is disabled im make the api open at cors options to public
 
-Please note that authentication routes are currently under construction. I'm implementing access control, JSON Web Tokens, and access token persistence.
-
-I plan to refactor the code according to best practices, adhering to the Clean Code principles.
+I will refactor the code soon
 
 ## Technologies and Tools
 
 This project utilizes a range of technologies and tools, including:
 
-- ReactJS
 - NodeJS
-- TypeScript
-- TailwindCSS
+- TypeScript / missing some types /refactoring soon
 - MongoDB (Local and Atlas)
 - Docker
-- Continuous Integration/Continuous Deployment (CI/CD) with Netlify and Heroku
+- Continuous Integration/Continuous Deployment (CI/CD) with OnRender
 - Postman for testing
-- Redux Toolkit / Query for state management
+- JWT
+- BCrypt
+- Express
 
 ## API Routes
 
-- `/users`: GET / POST / PUT / DELETE
-- `/messages`: GET / POST / PUT / DELETE
-- `/auth`: POST (Under development)
-- `/auth/refresh`: GET (Under development)
-- `/auth/logout`: POST (Under development)
-
-Please note that the main page is public. I've implemented context to restrict component access based on authentication level.
+- `https://rbvc-profile-v2-server.onrender.com//users`: GET / POST / PUT / DELETE
+- `https://rbvc-profile-v2-server.onrender.com//messages`: GET / POST / PUT / DELETE
+- `https://rbvc-profile-v2-server.onrender.com//auth`: POST (disabled)
+- `https://rbvc-profile-v2-server.onrender.com//auth/refresh`: GET (disabled)
+- `https://rbvc-profile-v2-server.onrender.com//auth/logout`: POST (disabled)
 
 ## Future Plans
 
-I'm planning to implement tests for this project. For this project for personal reasons I will do it after publishing tests for different browsers:
+I'm planning to implement tests for this project. For this project for personal reasons I will do it after publishing (different from test first - the correct way):
 - Architecture Testing
 - End-to-End Testing
 - Functional Testing
 
-These tests will be carried out after deployment, as currently, personal time constraints prevent me from addressing this aspect.
-
 ## Get in Touch
 
-I hope you enjoy exploring my portfolio showcase! Feel free to leave me a message in the GetStarted menu.
+Im deploying the front end at https://rbvcprofile.netlify.app/ need to finish to work with back end, btw mvp up
+
+I hope you enjoy exploring my portfolio showcase! Feel free to leave me a message.
 
 Thank you!
