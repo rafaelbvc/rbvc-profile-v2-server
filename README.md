@@ -26,11 +26,41 @@ This project utilizes a range of technologies and tools, including:
 
 ## API Routes
 
-- `https://rbvc-profile-v2-server.onrender.com//users`: GET / POST / PUT / DELETE
-- `https://rbvc-profile-v2-server.onrender.com//messages`: GET / POST / PUT / DELETE
-- `https://rbvc-profile-v2-server.onrender.com//auth`: POST (disabled)
-- `https://rbvc-profile-v2-server.onrender.com//auth/refresh`: GET (disabled)
-- `https://rbvc-profile-v2-server.onrender.com//auth/logout`: POST (disabled)
+- `https://rbvc-profile-v2-server.onrender.com/users`: GET / POST / PUT / DELETE
+- `https://rbvc-profile-v2-server.onrender.com/messages`: GET / POST / PUT / DELETE
+- `https://rbvc-profile-v2-server.onrender.com/auth`: POST (disabled)
+- `https://rbvc-profile-v2-server.onrender.com/auth/refresh`: GET (disabled)
+- `https://rbvc-profile-v2-server.onrender.com/auth/logout`: POST (disabled)
+
+## The JSON format for users: 
+
+    {
+        "firstName": " ",
+        "lastName": " ",
+        "email": " ",
+        "phone": " ",
+        "roles": [
+            " ",           
+        ],
+        "password": " "
+    },
+
+roles can be: Admin / Visitor / Subscribed
+firstName: at least 3 chars
+lastName: at least 3 chars
+email: xxxx@xxxx.xxx / xxxx@xxxx.xxx.xx - unique
+phone: internacional format
+password: min 8 chars, a: number, upper and low case and special char
+
+## The JSON format for messages:
+
+    {
+        "user": " ",
+        "title": " ",
+        "message": " ",
+    },
+
+user: The id from previously created user: mongo String format (ex: 64cefc01fbffa3b6dcbdbc88)
 
 ## Future Plans
 
