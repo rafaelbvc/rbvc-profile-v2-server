@@ -1,6 +1,6 @@
 const allowedOrigins = [
-  // "http://localhost:3000",
-  // "https://rbvc-profile.netlify.app",
+  "http://localhost:5173",
+  "https://rbvc-profile.netlify.app",
   "*",
 ];
 

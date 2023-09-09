@@ -5,7 +5,7 @@ import {
   getAllUsers,
   createNewUser,
 } from "../controllers/usersController";
-import verifyJWT from "../middleware/verifyJWT";
+// import verifyJWT from "../middleware/verifyJWT";
 
 const router = Router();
 // router.use(verifyJWT);
