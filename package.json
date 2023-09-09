@@ -8,7 +8,7 @@
     "start": "node ./build/server.js",
     "dev": "nodemon ./src/server",
     "tetst": "exit 1",
-    "build": "tsc && node copy-html.js && yarn install"
+    "build": "tsc && yarn install && node copy-html.js"
   },
   "keywords": [],
   "dependencies": {
