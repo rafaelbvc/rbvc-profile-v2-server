@@ -5,7 +5,7 @@ import {
   getAllMessages,
   updateMessage,
 } from "../controllers/messagesController";
-import verifyJWT from "../middleware/verifyJWT";
+// import verifyJWT from "../middleware/verifyJWT";
 
 const router = Router();
 // router.use(verifyJWT);
