@@ -12,7 +12,7 @@
     "outDir": "./build"
   },
   // "include": ["*", "src/server.ts"],
-  "include": ["src/**/*.ts", "src/server.ts"],
+  "include": ["src/**/*.ts", "src/server.ts", "src/views/**/*.html"],
   "exclude": ["node_modules"],
   "extends": "./tsconfig.paths.json"
 }
