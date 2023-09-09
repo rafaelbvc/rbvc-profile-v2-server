@@ -11,8 +11,8 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./build"
   },
-  "include": ["*", "src/server.ts"],
-  // "include": ["src/**/*.ts"],
+  // "include": ["*", "src/server.ts"],
+  "include": ["src/**/*.ts", "src/server.ts"],
   "exclude": ["node_modules"],
   "extends": "./tsconfig.paths.json"
 }
