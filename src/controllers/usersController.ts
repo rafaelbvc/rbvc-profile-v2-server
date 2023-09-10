@@ -38,7 +38,7 @@ export const createNewUser = async (req, res) => {
   const hashedPwd = await bcrypt.hash(password, 10); // salt rounds
 
   const userObject =
-    !Array.isArray(roles) || !roles.length
+    !roles || !roles.length
       ? { firstName, lastName, phone, email, password: hashedPwd }
       : { firstName, lastName, phone, email, password: hashedPwd, roles };
 
@@ -67,7 +67,7 @@ export const updateUser = async (req, res) => {
     !lastName ||
     !phone ||
     !email ||
-    !Array.isArray(roles) ||
+    !roles ||
     !roles.length ||
     typeof active !== "boolean"
   ) {

@@ -33,8 +33,8 @@ const userSchema = new Schema(
       max: 20,
     },
     roles: {
-      type: [String],
-      default: ["Visitor"],
+      type: String,
+      default: "Visitor",
     },
     active: {
       type: Boolean,
