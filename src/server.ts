@@ -15,7 +15,7 @@ import { rootRouter } from "./routes/root";
 import { messageRouter } from "./routes/messagesRoutes";
 import { authRouter } from "./routes/authRoutes";
 
-const PORT_DEV = process.env.PORT_DEV ? Number(process.env.PORT_DEV) : 5090;
+const PORT_DEV = process.env.PORT_DEV ? Number(process.env.PORT_DEV) : 5070;
 
 dotenv.config();
 
@@ -31,8 +31,8 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use("/", express.static(path.join(__dirname, "views")));
-// app.use("/", express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
+app.set("views", path.join(__dirname, "views"));
 
 app.use("/", rootRouter);
 app.use("/auth", authRouter);

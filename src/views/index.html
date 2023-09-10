@@ -1,21 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <meta>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rbvc-profile-server</title>
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <meta name="author" content="Rafael Vendramini" />
+    <meta name="description" content="server side (api) from rbvcprofile"/>
+    <link rel="icon" href="/icons/favicon.ico" />
+    <title>RBVC Profile Server </title>
+    <link rel="stylesheet" href="/css/styles.css" />
+
   </head>
   <body>
-    <h1>RBVC Profile Server</h1>
+    <header>RBVC PROFILE SERVER SIDE</header>
+    </br>
+    <h3>ROUTES:</h3>
     <section>
-      <a href="https://rbvc-profile-v2-server.onrender.com/users"
-        >Users | GET / POST / PUT / DELETE</a
+      <p>USERS:</p>
+      <a href="https://rbvc-profile-v2-server.onrender.com/users" target="_blank"
+        > 
+      <h4>JSON format for Users:</h4>
+      <p class="pJson">
+       GET: {
+          "_id": " ",
+          "firstName": " ",
+          "lastName": " ",
+          "email": " ",
+          "phone": " ",
+          "roles": " ",
+          "password": " ",
+      },
+      </p>
+      <p class="pJson">
+        POST: {
+           "firstName": " ",
+           "lastName": " ",
+           "email": " ",
+           "phone": " ",
+           "roles": " ",
+           "password": " "
+       },
+       </p>
+       <p class="pJson">
+        PATH: {
+          "id": " ",
+           "firstName": " ",
+           "lastName": " ",
+           "email": " ",
+           "phone": " ",
+           "roles": " ",
+           "password": " "
+       },
+       </p>
+       <p class="pJson">
+        DELETE: {
+           "id": " ",
+       },
+       </p>
+      </a
       >
-    </section>
-    <section>
-      <a href="https://rbvc-profile-v2-server.onrender.com/messages"
-        >Messages | GET / POST / PUT / DELETE</a
+      <p>MESSAGES:</p>
+      <a href="https://rbvc-profile-v2-server.onrender.com/messages" target="_blank"
+        > <h4>JSON format for Messages:</h4>
+        <p class="pJson">
+         GET: {
+            "user": " ",
+            "title": " ",
+            "message": " ",
+        }
+        </p>
+        <p class="pJson">
+          POST: {
+             "user": " ",
+             "title": " ",
+             "message": " ",
+         }
+         </p>
+         <p class="pJson">
+          PATH: {
+             "user": " ",
+             "title": " ",
+             "message": " ",
+         }
+         </p>
+         <p class="pJson">
+          DELETE: {
+             "id": " ",
+         }
+         </p>
+        </a
       >
     </section>
   </body>
