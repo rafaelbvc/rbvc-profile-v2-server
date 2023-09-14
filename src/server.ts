@@ -14,6 +14,7 @@ import { userRouter } from "./routes/userRoutes";
 import { rootRouter } from "./routes/root";
 import { messageRouter } from "./routes/messagesRoutes";
 import { authRouter } from "./routes/authRoutes";
+import { createNewUser } from "./controllers/usersController";
 
 const PORT_DEV = process.env.PORT_DEV ? Number(process.env.PORT_DEV) : 5070;
 
@@ -37,6 +38,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use("/", rootRouter);
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
+app.use("/createuser", createNewUser);
 app.use("/messages", messageRouter);
 
 app.all("*", (req, res) => {

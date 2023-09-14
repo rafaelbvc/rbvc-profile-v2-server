@@ -125,7 +125,7 @@ export const deleteUser = async (req, res) => {
   // Does the user still have assigned notes?
   const message = await Message.findOne({ user: id }).lean().exec();
   if (message) {
-    return res.status(400).json({ message: "User has assigned notes" });
+    return res.status(400).json({ message: "User has assigned messages" });
   }
 
   // Does the user exist to delete?

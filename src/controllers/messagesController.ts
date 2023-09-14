@@ -27,7 +27,7 @@ export const getAllMessages = async (req, res) => {
 };
 
 // @access Private // @route POST /messages // @desc Create new messages
-export const createNewMessages = async (req, res) => {
+export const createNewMessage = async (req, res) => {
   const { user, title, message } = req.body;
   // console.log(user, title, message);
 
@@ -48,7 +48,7 @@ export const createNewMessages = async (req, res) => {
 
   // Create and store the new user
   const messages = await Message.create({ user, title, message });
-  console.log(messages, "messages");
+  // console.log(messages, "messages");
 
   if (messages) {
     // Created
