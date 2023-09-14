@@ -3,17 +3,17 @@ import {
   updateUser,
   deleteUser,
   getAllUsers,
-  createNewUser,
+  // createNewUser,
 } from "../controllers/usersController";
-// import verifyJWT from "../middleware/verifyJWT";
+import verifyJWT from "../middleware/verifyJWT";
 
 const router = Router();
-// router.use(verifyJWT);
+router.use(verifyJWT);
 
 router
   .route("/")
   .get(getAllUsers)
-  .post(createNewUser)
+  // .post(createNewUser)
   .patch(updateUser)
   .delete(deleteUser);
 

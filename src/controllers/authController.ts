@@ -12,31 +12,36 @@ export const login = async (req, res) => {
 
   const foundUser = await User.findOne({ email }).exec();
 
-  if (!foundUser || !foundUser.active) {
-    return res.status(401).json({ message: "Unauthorized" });
+  if (!foundUser) {
+    return res.status(401).json({ message: "The user does not exist" });
+  }
+
+  if (!foundUser.active) {
+    return res.status(401).json({ message: "The user is disabled" });
   }
 
   const match = await bcrypt.compare(password, foundUser.password);
 
-  if (!match) return res.status(401).json({ message: "Unauthorized" });
+  if (!match)
+    return res
+      .status(401)
+      .json({ message: "Email or password does not match" });
 
   const accessToken = jwt.sign(
     {
       UserInfo: {
-        username: foundUser.email,
+        email: foundUser.email,
         roles: foundUser.roles,
       },
     },
     process.env.ACCESS_TOKEN_SECRET,
-    // { expiresIn: "15m" }
-    { expiresIn: "1m" }
+    { expiresIn: "15m" }
   );
 
   const refreshToken = jwt.sign(
-    { username: foundUser.email },
+    { email: foundUser.email },
     process.env.REFRESH_TOKEN_SECRET,
-    // { expiresIn: "7d" }
-    { expiresIn: "1d" }
+    { expiresIn: "7d" }
   );
 
   // Create secure cookie with refresh token
@@ -69,7 +74,8 @@ export const refresh = (req, res) => {
         email: decoded.email,
       }).exec();
 
-      if (!foundUser) return res.status(401).json({ message: "Unauthorized" });
+      if (!foundUser)
+        return res.status(401).json({ message: "The user does not exist" });
 
       const accessToken = jwt.sign(
         {
@@ -80,7 +86,7 @@ export const refresh = (req, res) => {
         },
         process.env.ACCESS_TOKEN_SECRET,
         // { expiresIn: "15m" }
-        { expiresIn: "1m" }
+        { expiresIn: "15m" }
       );
 
       res.json({ accessToken });

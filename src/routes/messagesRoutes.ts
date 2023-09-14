@@ -1,19 +1,19 @@
 import { Router } from "express";
 import {
-  createNewMessages,
+  createNewMessage,
   deleteMessage,
   getAllMessages,
   updateMessage,
 } from "../controllers/messagesController";
-// import verifyJWT from "../middleware/verifyJWT";
+import verifyJWT from "../middleware/verifyJWT";
 
 const router = Router();
-// router.use(verifyJWT);
+router.use(verifyJWT);
 
 router
   .route("/")
   .get(getAllMessages)
-  .post(createNewMessages)
+  .post(createNewMessage)
   .patch(updateMessage)
   .delete(deleteMessage);
 
