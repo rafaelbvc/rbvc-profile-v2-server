@@ -80,6 +80,9 @@ export const refresh = (req, res) => {
       const accessToken = jwt.sign(
         {
           UserInfo: {
+            firstName: foundUser.firstName,
+            lastName: foundUser.lastName,
+            phone: foundUser.phone,
             email: foundUser.email,
             roles: foundUser.roles,
           },
